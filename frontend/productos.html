@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Productos - Sodería</title>
+  <link rel="stylesheet" href="/frontend/css/styles.css">
+  <script src="js/auth.js" defer></script>
+  <script src="js/productos.js" defer></script>
+</head>
+<body>
+  <h1>Catálogo de Productos</h1>
+
+  <div class="productos-container">
+    <section class="formulario">
+      <h3 id="formTitulo">Agregar Producto</h3>
+      <form id="productoForm">
+        <input type="hidden" id="productoId">
+        <input type="text" id="nombre" placeholder="Nombre" required>
+        <input type="text" id="descripcion" placeholder="Descripción">
+        <input type="number" id="precio" placeholder="Precio" step="0.01" required>
+        <input type="number" id="stock" placeholder="Stock" required>
+        <div class="form-buttons">
+          <button type="submit" class="btn guardar">Guardar</button>
+          <button type="button" onclick="resetFormulario()" class="btn cancelar">Cancelar</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="tabla">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="tablaProductos"></tbody>
+      </table>
+    </section>
+  </div>
+
+  <div class="volver-panel">
+    <button onclick="window.location.href='home.html'" class="btn volver">Volver al Panel</button>
+  </div>
+</body>
+</html>
